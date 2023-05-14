@@ -3,8 +3,17 @@ body {
   padding: 0;
 }
 
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500 !important;
+}
+
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {
+  font-family: 'Wix Madefor Text', sans-serif;
 }
 
 #preloader {
@@ -338,7 +347,8 @@ p {
 }
 
 .variety .chef .info h2 {
-  font-size: 60px;
+  padding-top: 35px !important;
+  font-size: 50px;
 }
 
 .variety .chef .info p {
@@ -371,7 +381,6 @@ p {
   width: 80%;
   margin: auto;
   margin-bottom: -20px;
-  padding-left: 40px;
 }
 
 .menu .header p {
@@ -906,6 +915,7 @@ p {
     display: none;
   }
   .variety .chef .info h2 {
+    padding-top: 0;
     font-size: 30px;
   }
   .variety .chef .info p {
