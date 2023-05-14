@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ferinco Recipes</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Raleway:wght@100">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -14,208 +15,394 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Ferin<span>Food</span></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
+    <div id="preloader">
+      <img src="Images/loading.gif" alt="">
+    </div>
+    <div  id="front-page">
+      <section class="nav-section">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Ferin<span>Food</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-        </form>
-      </div>
-    </nav>
-    <section class="banner">
-      <div class="banner-intro">
-        <div class="banner-intro-phrases">
-          <h2>Let's Start Cooking with Popular Recipes</h2>
-          <p>
-            Want to learn to cook bbut confused on how to start?<br />No need to
-            worry again
-          </p>
-        </div>
-        <div class="banner-intro-buttons">
-          <button id="start-btn">Get Started</button>
-          <button id="explore-btn">Explore Menu</button>
-        </div>
-      </div>
-      <div class="banner-image">
-        <!-- <img src="Images/Background/banner-image.png" alt="" /> -->
-        <!-- <div class="cards">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Download</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and ment.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div> -->
-      </div>
-    </section>
-    <section class="foods">
-        <div class="foods-header">
-<h2>Popular Foods</h2>
-<p>we provide variety of food and beverage recipes <br> with high taste from famous chefs</p>
-        </div>
-        <div class="foods-body">
-            <div class="foods-body-items">
-                <div class="foods-body-items-item big"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item big"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item big"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-            </div>
-            <div class="foods-body-items">
-                <div class="foods-body-items-item"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item big"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-                <div class="foods-body-items-item big"><a href=""><img src="Images/Food Examples/chickensoup.png" alt=""></a></div>
-            </div>
+        </nav>
+      </section>
+      <section class="banner">
 
-        </div>
-    </section>
-    <section class="variety">
-              <div class="chef">
-                <div class="image">
-                    <img src="Images/Chef/chef1.png" alt="">
-                </div>
-                <div class="info">
-                    <h6>Variety of food</h6>
-                    <h2>Variety of food and <br> beverage recipes</h2>
-                    <p>We have preparred a variety of food and beverage <br> recipes from famous chefs, with cooking steps <br> and with good taste</p>
-                <a href=""><button>View Menu</button></a>
+        <div class="banner-intro">
+          <div class="banner-intro-phrases">
+            <h2>Let's Start Cooking with Popular Recipes</h2>
+            <div class="banner-slide">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="Images/Background/banner-image.png" alt="First slide">
+                    <div class="card">
+                      <h6>view Recipes</h6>
+                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="Images/Background/top-background.png" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="Images/Background/top-background2.png" alt="Third slide">
+                  </div>
                 </div>
               </div>
-    </section>
-    <section class="menu">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-           <div class="info">
-            <h6>Popular Menu</h6>
-            <h2>Canadian Burger</h2>
-            Cheeseburger is a hamburger toopped with cheese. <br>
-            Traditionally, the slice of chees is placed on top of <br>
-            the meat patty
-            <div class="rate"><p>30 mins <span>.</span></p> <p> 5.93</p></div>
-<div class="ingredients">
-  <img src="Images/Ingredients/onion.png" alt=""><img src="Images/Ingredients/pepper.png" alt=""><img src="images/Ingredients/tomato.png" alt=""><img src="images/Ingredients/nuts.png" alt=""><img src="images/Ingredients/thyme.png" alt="">
-</div>
-           </div>
-           <div class="image">
-            <img src="images/Background/long burger.png" alt="">
-           </div>
+            </div>
+            <p>
+              Want to learn to cook but confused on how to start?<br />No need to
+              worry again
+            </p>
           </div>
-          <div class="carousel-item">
-            <div class="info">
-              <h6>Popular Menu</h6>
-              <h2>Canadian Burger</h2>
-              Cheeseburger is a hamburger toopped with cheese. <br>
-              Traditionally, the slice of chees is placed on top of <br>
-              the meat patty
-              <div class="rate"><p>30 mins <span>.</span></p> <p> 5.93</p></div>
-  <div class="ingredients">
-    <img src="Images/Ingredients/onion.png" alt=""><img src="Images/Ingredients/pepper.png" alt=""><img src="images/Ingredients/tomato.png" alt=""><img src="images/Ingredients/nuts.png" alt=""><img src="images/Ingredients/thyme.png" alt="">
-  </div>
-             </div>
-             <div class="image">
-              <img src="images/Background/long burger.png" alt="">
-             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="info">
-              <h6>Popular Menu</h6>
-              <h2>Canadian Burger</h2>
-              Cheeseburger is a hamburger toopped with cheese. <br>
-              Traditionally, the slice of chees is placed on top of <br>
-              the meat patty
-              <div class="rate"><p>30 mins <span>.</span></p> <p> 5.93</p></div>
-  <div class="ingredients">
-    <img src="Images/Ingredients/onion.png" alt=""><img src="Images/Ingredients/pepper.png" alt=""><img src="images/Ingredients/tomato.png" alt=""><img src="images/Ingredients/nuts.png" alt=""><img src="images/Ingredients/thyme.png" alt="">
-  </div>
-             </div>
-             <div class="image">
-              <img src="images/Background/long burger.png" alt="">
-             </div>
+          <div class="banner-intro-buttons">
+            <button id="start-btn">Get Started</button>
+            <button id="explore-btn">Explore Menu</button>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </section>
-    <section class="subscribe">
-      <div class="container">
-        <h2>Subsccribe to get weekly recipe updates</h2>
-<div class="email">
-  <form action=""><input type="text"> <button type="submit">Subscribe</button></form>
-</div>
-      </div>
-    </section>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  -->
+        <div class="banner-image">
+          <!-- <img src="Images/Background/banner-image.png" alt="" /> -->
+          <!-- <div class="cards">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and ment.
+              </p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <section class="foods">
+        <div class="foods-header">
+          <h2>Popular Foods</h2>
+          <p>
+            we provide variety of food and beverage recipes with high taste from famous chefs
+          </p>
+        </div>
+        <div class="foods-body">
+          <div class="foods-body-items">
+            <div class="foods-body-items-item big">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item big">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item big">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="foods-body-items">
+            <div class="foods-body-items-item">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item big">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+            <div class="foods-body-items-item big">
+              <a href=""
+                ><img src="Images/Food Examples/chickensoup.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="variety">
+        <h5 class="header">Variety of food</h5>
+        <div class="chef">
+          <div class="image">
+            <img src="Images/Chef/chef1.png" alt="" />
+          </div>
+          <div class="info">
+            <h6>Variety of food</h6>
+            <h2>
+              Variety of food and
+              beverage recipes
+            </h2>
+            <p>
+              We have preparred a variety of food and beverage recipes from famous chefs, with cooking steps  and with good taste
+            </p>
+            <a href=""><button>View Menu</button></a>
+          </div>
+        </div>
+      </section>
+      <section class="menu">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ul class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="item">
+                <div class="info">
+                  <h6>Popular Menu</h6>
+                  <h2>Canadian Burger</h2>
+                  <p>
+                    Cheeseburger is a hamburger toopped with cheese. <br />
+                    Traditionally, the slice of chees is placed on top of <br />
+                    the meat patty
+                  </p>
+                  <div class="mobile-image">
+                    <img src="images/Background/long burger.png" alt="" />
+                  </div>
+                  <div class="rate">
+                    <p>30 mins <span>.</span></p>
+                    <p>5.93</p>
+                  </div>
+                  <div class="ingredients">
+                    <img src="Images/Ingredients/onion.png" alt="" /><img
+                      src="Images/Ingredients/pepper.png"
+                      alt=""
+                    /><img src="images/Ingredients/tomato.png" alt="" /><img
+                      src="images/Ingredients/nuts.png"
+                      alt=""
+                    /><img src="images/Ingredients/thyme.png" alt="" />
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/Background/long burger.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="item">
+                <div class="info">
+                  <h6>Popular Menu</h6>
+                  <h2>Canadian Burger</h2>
+                  <p>Cheeseburger is a hamburger toopped with cheese. <br />
+                  Traditionally, the slice of chees is placed on top of <br />
+                  the meat patty</p>
+                  <div class="mobile-image">
+                    <img src="images/Background/long burger.png" alt="" />
+                  </div>
+                  <div class="rate">
+                    <p>30 mins <span>.</span></p>
+                    <p>5.93</p>
+                  </div>
+                  <div class="ingredients">
+                    <img src="Images/Ingredients/onion.png" alt="" /><img
+                      src="Images/Ingredients/pepper.png"
+                      alt=""
+                    /><img src="images/Ingredients/tomato.png" alt="" /><img
+                      src="images/Ingredients/nuts.png"
+                      alt=""
+                    /><img src="images/Ingredients/thyme.png" alt="" />
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/Background/long burger.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="item">
+                <div class="info">
+                  <h6>Popular Menu</h6>
+                  <h2>Canadian Burger</h2>
+                  <p>Cheeseburger is a hamburger toopped with cheese. <br />
+                    Traditionally, the slice of chees is placed on top of <br />
+                    the meat patty</p>
+                    <div class="mobile-image">
+                      <img src="images/Background/long burger.png" alt="" />
+                    </div>
+                  <div class="rate">
+                    <p>30 mins <span>.</span></p>
+                    <p>5.93</p>
+                  </div>
+                  <div class="ingredients">
+                    <img src="Images/Ingredients/onion.png" alt="" /><img
+                      src="Images/Ingredients/pepper.png"
+                      alt=""
+                    /><img src="images/Ingredients/tomato.png" alt="" /><img
+                      src="images/Ingredients/nuts.png"
+                      alt=""
+                    /><img src="images/Ingredients/thyme.png" alt="" />
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/Background/long burger.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container">
+          <h2>Subsccribe to get weekly recipe updates</h2>
+          <div class="email">
+            <form action="">
+              <input type="email" placeholder="enter your email here" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="bottom">
+        <div class="links">
+          <h5>Ferin<span>Food</span></h5>
+          <p>
+            FerinFood is an application <br />
+            used to find a variety of famous <br />
+            food and drink recipes.
+          </p>
+        </div>
+        <div class="links">
+          <h5>About</h5>
+          <a>About Us</a>
+          <a>Recipe</a>
+          <a>Download</a>
+          <a>Contact</a>
+        </div>
+        <div class="links">
+          <h5>Comapny</h5>
+          <a>Subscribe</a>
+          <a>FAQs</a>
+        </div>
+        <div class="links">
+          <h5>Support</h5>
+          <a>Support Center</a>
+          <a>Feedback</a>
+          <a>Sponsorship</a>
+          <a>Accessibility</a>
+        </div>
+        <div class="links">
+          <h5>Get in Touch</h5>
+          <p>
+            Questions or feedback? <br />
+            We'd love to hear from you
+          </p>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer-nav">
+          <div class="copyright">
+            <p>Copyright. Ferinco 2023, All right reserved.</p>
+          </div>
+          <div class="social-media">
+            <img src="Images/icons/facebook.png" alt="" />
+            <img src="Images/icons/twitter.png" alt="" />
+            <img src="Images/icons/instagram.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </div>
+<script src="JS/index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
