@@ -13,6 +13,8 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <div id="preloader">
@@ -183,10 +185,10 @@
       <section class="variety">
         <h5 class="header">Variety of food</h5>
         <div class="chef">
-          <div class="image">
+          <div class="image" data-aos="fade-up">
             <img src="Images/Chef/chef1.png" alt="" />
           </div>
-          <div class="info">
+          <div class="info" data-aos="fade-down">
             <h6>Variety of food</h6>
             <h2>
               Variety of food and
@@ -200,6 +202,7 @@
         </div>
       </section>
       <section class="menu">
+        <div class="header"><p>Popular menu</p></div>
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -218,7 +221,7 @@
             <div class="carousel-item active">
               <div class="item">
                 <div class="info">
-                  <h6>Popular Menu</h6>
+        
                   <h2>Canadian Burger</h2>
                   <p>
                     Cheeseburger is a hamburger toopped with cheese. <br />
@@ -229,8 +232,9 @@
                     <img src="images/Background/long burger.png" alt="" />
                   </div>
                   <div class="rate">
-                    <p>30 mins <span>.</span></p>
-                    <p>5.93</p>
+                    <p>30 mins</p>
+                   
+                    <p> <img src="Images/icons/fire.png" alt="">5.93</p>
                   </div>
                   <div class="ingredients">
                     <img src="Images/Ingredients/onion.png" alt="" /><img
@@ -250,7 +254,6 @@
             <div class="carousel-item">
               <div class="item">
                 <div class="info">
-                  <h6>Popular Menu</h6>
                   <h2>Canadian Burger</h2>
                   <p>Cheeseburger is a hamburger toopped with cheese. <br />
                   Traditionally, the slice of chees is placed on top of <br />
@@ -259,8 +262,9 @@
                     <img src="images/Background/long burger.png" alt="" />
                   </div>
                   <div class="rate">
-                    <p>30 mins <span>.</span></p>
-                    <p>5.93</p>
+                    <p>30 mins</p>
+                   
+                    <p> <img src="Images/icons/fire.png" alt="">5.93</p>
                   </div>
                   <div class="ingredients">
                     <img src="Images/Ingredients/onion.png" alt="" /><img
@@ -280,7 +284,7 @@
             <div class="carousel-item">
               <div class="item">
                 <div class="info">
-                  <h6>Popular Menu</h6>
+  
                   <h2>Canadian Burger</h2>
                   <p>Cheeseburger is a hamburger toopped with cheese. <br />
                     Traditionally, the slice of chees is placed on top of <br />
@@ -288,10 +292,11 @@
                     <div class="mobile-image">
                       <img src="images/Background/long burger.png" alt="" />
                     </div>
-                  <div class="rate">
-                    <p>30 mins <span>.</span></p>
-                    <p>5.93</p>
-                  </div>
+                    <div class="rate">
+                      <p>30 mins</p>
+                     
+                      <p> <img src="Images/icons/fire.png" alt="">5.93</p>
+                    </div>
                   <div class="ingredients">
                     <img src="Images/Ingredients/onion.png" alt="" /><img
                       src="Images/Ingredients/pepper.png"
@@ -389,6 +394,10 @@
       </section>
     </div>
 <script src="JS/index.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

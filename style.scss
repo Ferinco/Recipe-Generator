@@ -23,6 +23,7 @@ p{
   &-brand {
     color: black;
     font-weight: 600;
+    margin-left: 25px;
 
     span {
       color: rgb(56, 160, 91);
@@ -67,9 +68,10 @@ p{
     }
   }
 }
+
 .banner {
   height: auto;
-  width: 100%;
+  width: 100% !important;
   display: flex;
   flex-direction: row;
   justify-content: end !important;
@@ -198,6 +200,9 @@ p{
 .variety {
   height: auto;
   margin-top: 100px;
+  .header{
+    display: none;
+  }
   .chef {
     display: flex;
     align-items: start;
@@ -225,7 +230,7 @@ p{
         border-radius: 30px;
         text-align: center;
         padding: 5px;
-        width: 25%;
+        width: 35%;
         color: rgb(56, 160, 91);
         background-color: rgb(188, 235, 188);
       }
@@ -253,7 +258,23 @@ p{
 .menu {
   height: auto;
   margin-top: 100px;
-  .mmobile-image{
+  .header{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: -20px;
+    padding-left: 40px;
+    p{
+        padding: 5px;
+        border-radius: 30px;
+        text-align: center;
+        padding: 5px;
+       width: 15%;
+        color: rgb(56, 160, 91);
+        background-color: rgb(188, 235, 188);
+    }
+  }
+  .mobile-image{
     display: none;
   }
 
@@ -284,15 +305,7 @@ p{
         .info {
           display: flex;
           flex-direction: column;
-          h6 {
 
-            border-radius: 30px;
-            text-align: center;
-            padding: 5px;
-            width: 35%;
-            color: rgb(56, 160, 91);
-            background-color: rgb(188, 235, 188);
-          }
           h2 {
             margin-top: 10px;
             font-size: 50px;
@@ -304,6 +317,19 @@ p{
           .rate {
             display: flex;
             flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            p{
+                display: flex;
+                align-items: center;
+
+                img{
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                    padding-right: 2px;
+                }
+            }
           }
           .ingredients {
             display: flex;
@@ -463,6 +489,11 @@ p{
       .navbar{
         width: 80% !important;
         margin: auto !important;
+        &-brand {
+
+            margin-left: 0;
+
+          }
       }
     .banner {
         display: flex;
@@ -486,7 +517,7 @@ display: none;
             flex-direction: column;
             .banner-slide{
                 display: block;
-                padding-bottom: 30px;
+                
                 img{
                     object-fit: cover;
                     display: block;
@@ -494,6 +525,7 @@ display: none;
                     padding-bottom: 20px;
                    }
                 .card{
+                   
                     display: block;
                     flex-direction: column;
                     background-color: #f5f5f5;
@@ -501,12 +533,12 @@ display: none;
                     overflow: hidden;
                     margin-top: -100px;
                     border: 0;
+                    padding-bottom: 30px;
 
                     h6{
                         font-size: 12px;
                     }
                     p{
-                        background: transparent;
                         font-size: 9px;
                     }
                 }
@@ -555,7 +587,11 @@ display: none;
         }
       }
       .foods {
+        padding-top: 20px;
         &-header {
+            h2{
+                font-size: 30px;
+            }
           p{
 font-size: 20px;
 width: 80%;
@@ -593,16 +629,20 @@ margin: auto;
         height: auto;
         margin-top: 40px;
         .header{
+            text-align: center;
+           
+            justify-content: center;
+            display: flex;
             margin-bottom: 10px;
             border-radius: 30px;
-            text-align: center;
             padding: 5px;
-            width: 50%;
+            width: 60%;
             color: rgb(56, 160, 91);
             background-color: rgb(188, 235, 188);
             font-size: 20px;
           }
         .chef {
+            padding-top: 25px;
           display: flex;
           flex-direction: column;
           align-items: start;
@@ -647,6 +687,7 @@ h6{
         height: auto;
         margin-top: 100px;
       .mobile-image{
+        display: flex;
         width: 250px;
         height: 250px;
         background-color: #f5f5f5;
@@ -659,6 +700,16 @@ h6{
             height: 100%;
         }
       }
+      .header{
+        display: flex;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 0;
+        padding-left: 0;
+        p{
+           width: 40%;
+        }
+    }
         .carousel {
           padding-bottom: 20px;
           display: flex;
@@ -698,7 +749,7 @@ h6{
                 }
                 h2 {
                   margin-top: 10px;
-                  font-size: 50px;
+                  font-size: 30px;
                 }
                 p{
                   margin-top: 10px;
