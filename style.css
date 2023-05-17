@@ -221,6 +221,71 @@ button, a {
   border: 1px solid #bcebbc;
 }
 
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 80%;
+  margin: auto !important;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+.results .result {
+  width: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.results .result-meal {
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+}
+
+.results .result-meal-image {
+  width: 80%;
+  padding: 20px 0;
+}
+
+.results .result-meal-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .foods {
   padding-top: 70px;
   height: auto;
@@ -543,7 +608,8 @@ button, a {
 .subscribe .container {
   border-radius: 30px;
   height: 400px;
-  background-image: url(Images/Background/search-background.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.5))), url(Images/Background/search-background.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(Images/Background/search-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
