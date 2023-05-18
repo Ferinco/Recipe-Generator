@@ -254,7 +254,7 @@ button, a {
 }
 
 .results .result-meal {
-  padding: 20px;
+  padding: 10px;
   width: 300px;
   height: auto;
   display: -webkit-box;
@@ -276,7 +276,6 @@ button, a {
 
 .results .result-meal-image {
   width: 80%;
-  padding: 20px 0;
 }
 
 .results .result-meal-image img {
@@ -284,6 +283,38 @@ button, a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.recipe {
+  padding: 10px;
+  background-color: blue;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 30%;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
+}
+
+.recipe-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.recipe-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .foods {
