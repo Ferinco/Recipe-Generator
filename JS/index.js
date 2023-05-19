@@ -80,19 +80,27 @@ function getMealRecipe(e){
         })
     // }
 }
+
 window.onload = displayFoods=()=>{
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=52773`)
+
+}
+    const divs = document.querySelectorAll('.foods-body-items-item');
+divs.forEach(food => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
     .then(response => response.json())
     .then(data =>{
         console.log(data)
         if(data.meals){
             const foodLink = document.createElement("a");
+            food.dataset.id = `${food.idMeal}`
             foodLink.innerHTML = `
             <img src="${data.meals[0].strMealThumb}" alt=""/>`
-            document.getElementById("first").appendChild(foodLink)
+            food.appendChild(foodLink)
         }
     })
-}
+
+  
+});
 
 
 frontPage.style.display = "none"
