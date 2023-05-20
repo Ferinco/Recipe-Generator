@@ -141,5 +141,5 @@ cancelBar.addEventListener("click",()=>{
     cancelBar.style.display = "none"
 })
 closeResults=()=>{
-    window.history.back()
+   result.remove()
 }
