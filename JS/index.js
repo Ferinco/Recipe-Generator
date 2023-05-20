@@ -143,5 +143,5 @@ cancelBar.addEventListener("click",()=>{
 closeResults=()=>{
    result.remove()
     document.querySelector(".results-header").style.display = "none"
-document.querySelector(".banner").style.display = "block"
+document.querySelector(".banner").style.display = "flex"
 }
