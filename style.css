@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-h2 {
+h2, h3 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500 !important;
 }
@@ -14,6 +14,7 @@ p {
 
 button, a {
   font-family: 'Wix Madefor Text', sans-serif;
+  outline: none !important;
 }
 
 #preloader {
@@ -222,7 +223,9 @@ button, a {
 }
 
 .results {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -248,7 +251,7 @@ button, a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .results .result-meal {
@@ -268,8 +271,9 @@ button, a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f5f5f5;
-  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .results .result-meal-image {
@@ -283,9 +287,23 @@ button, a {
      object-fit: cover;
 }
 
+.results .result-meal-button button {
+  padding: 5px 10px;
+  color: #38a05b;
+  border: 1px solid #38a05b;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.results .result-meal-button button:hover {
+  background-color: #bcebbc;
+  color: #38a05b;
+  border: 1px solid #bcebbc;
+}
+
 .recipe {
   padding: 10px;
-  background-color: blue;
+  background-color: #f5f5f5;
   width: 80%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -303,6 +321,11 @@ button, a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+
+.recipe-button button {
+  border: 0;
+  background: transparent;
 }
 
 .recipe-body {
@@ -340,6 +363,7 @@ button, a {
 }
 
 .foods-body {
+  padding-top: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,7 +510,7 @@ button, a {
   margin-bottom: -20px;
 }
 
-.menu .header p {
+.menu .header h6 {
   padding: 5px;
   border-radius: 30px;
   text-align: center;
@@ -968,7 +992,7 @@ a:hover {
     border: 1px solid #bcebbc;
   }
   .foods {
-    padding-top: 20px;
+    padding-top: 30px;
   }
   .foods-header h2 {
     font-size: 30px;
@@ -979,6 +1003,7 @@ a:hover {
     margin: auto;
   }
   .foods-body {
+    padding-top: 30px;
     width: 80%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1122,8 +1147,13 @@ a:hover {
     margin-bottom: 0;
     padding-left: 0;
   }
-  .menu .header p {
+  .menu .header h6 {
     width: 40%;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px;
+    color: #38a05b;
+    background-color: #bcebbc;
   }
   .menu .carousel {
     padding-bottom: 20px;
@@ -1324,9 +1354,6 @@ a:hover {
   .banner-intro-buttons button {
     border-radius: 10px;
   }
-  .foods {
-    padding-top: 30px;
-  }
   .foods-header h2 {
     font-size: 30px;
     padding-bottom: 0;
@@ -1335,6 +1362,7 @@ a:hover {
     font-size: 16px;
   }
   .foods-body {
+    padding-top: 30px;
     width: 80%;
     margin: auto;
   }
@@ -1463,6 +1491,49 @@ a:hover {
     width: 80%;
   }
   .bottom .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: start !important;
+    -webkit-box-pack: left !important;
+        -ms-flex-pack: left !important;
+            justify-content: left !important;
+  }
+  .bottom span {
+    color: #38a05b;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 980px) {
+  .bottom {
+    width: 80%;
+    margin: auto !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+    padding-top: 50px;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    gap: 50px;
+  }
+  .bottom .links {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: end !important;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
