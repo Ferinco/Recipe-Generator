@@ -6,9 +6,12 @@ const result = document.getElementById("result")
 const searchBtn = document.getElementById("search-btn")
 const searchResults = document.getElementById("search-results")
 const recipeGetter = document.getElementById("recipe-getter")
+notFound = document.createElement("p")
+notFound.id = "not-found"
+notFound.innerHTML = `sorry, couldn't find a match or your search`
 document.querySelector(".results-header").style.display = "none"
-// cancelBar.style.display = "none"
-// searchResults.style.display = "none"
+searchResults.style.display = "none"
+const foods = document.querySelectorAll('.foods-body-items-item');
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -22,6 +25,7 @@ searchBtn.addEventListener("click",(e)=>{
         console.log(data)
         if(data.meals){
             data.meals.forEach(meal => {
+                notFound.remove()
                 const resultMeal = document.createElement("div")
                 resultMeal.className = "result-meal"
                 resultMeal.dataset.id = `${meal.idMeal}`
@@ -35,15 +39,14 @@ searchBtn.addEventListener("click",(e)=>{
                 result.appendChild(resultMeal);
                 searchResults.appendChild(result);
                 searchResults.style.display = "block";
+                result.style.height = "auto";
 
     });
  
 }
 else{
     document.querySelector(".results-header").style.display = "none"
-    notFound = document.createElement("p")
-    notFound.id = "not-found"
-notFound.innerHTML = `sorry, couldn't find a match or your search`
+
 result.appendChild(notFound)
 searchResults.style.display = "block"
 searchResults.appendChild(result)
@@ -53,43 +56,7 @@ result.style.alignItems = "center"
 
 }
 })
-.catch(error =>{console.log(error)})
 })
-
-
-
-// result.addEventListener("click",(e)=>{
-//     e.preventDefault()
-//     if (e.target.classList.contains("details-btn")) {
-//                 let mealItem = e.target.parentElement.parentElement;
-//                 fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-//                 .then(response =>response.json())
-//                 .then(data =>{
-//                     console.log(data);
-//                     if (data.meals) {
-//                         displayRecipe=(meal)=>{
-//                             meal[0] = meal;
-//                             recipe = document.createElement("div");
-//                             recipe.className = "recipe";
-//                             recipe.innerHTML = `
-//                             <div class="recipe-button">
-//                             <button id="close-recipe" onclick = "cancelRecipe()"></button>
-//                             </div>
-//                             <div class="recipe-body">
-//                             <h3>${meal[0].strMeal}</h3>
-//                             <p>Category</p>
-//                             <h3>Instructions</h3>
-//                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, officiis. Consequatur deleniti mollitia vitae culpa aliquid tenetur expedita optio? Odio enim ipsam veritatis. Excepturi et consectetur eum, aut quia laboriosam quisquam ad omnis cupiditate deleniti blanditiis vel, reprehenderit ullam soluta.</p>
-//                             </div>`
-//                             console.log(recipe)
-//                             searchResults.appendChild(recipe)
-//                             console.log(searchResults)
-//                         }
-//                     }
-//                 })
-                    
-//                 }
-// })
 result.addEventListener("click", (e) => {
     e.preventDefault();
     if (e.target.classList.contains("details-btn")) {
@@ -107,8 +74,7 @@ result.addEventListener("click", (e) => {
           console.log("Error:", error);
         });
     }
-  });
-  
+  }); 
   function displayRecipe(meal) {
     const recipe = document.createElement("div");
     recipe.className = "recipe";
@@ -124,23 +90,28 @@ result.addEventListener("click", (e) => {
       </div>`;
   
     searchResults.appendChild(recipe);
-  }
-  
+  } 
 function cancelRecipe() {
-    // Define the functionality to be executed when the button is clicked
-    // For example, you can remove the recipe from the DOM:
     const recipe = document.querySelector(".recipe");
     recipe.remove();
   }
-  
-  
-
- 
-
+  foods.forEach(food=>{
+    food.addEventListener("click",(e)=>{
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data)
+            if(data.meals){
+                const meal = data.meals[0];
+            displayRecipe(meal)
+       
+        }
+    })   
+    })
+  })
 window.onload = displayFoods=()=>{
-
-    const divs = document.querySelectorAll('.foods-body-items-item');
-    divs.forEach(food => {
+    
+    foods.forEach(food => {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
         .then(response => response.json())
         .then(data =>{
@@ -152,13 +123,9 @@ window.onload = displayFoods=()=>{
             <img src="${data.meals[0].strMealThumb}" alt=""/>`
             food.appendChild(foodLink)
         }
-    })
-    
-    
+    })   
 });
 }
-
-
 frontPage.style.display = "none"
 window.addEventListener("load",()=>{
 frontPage.style.display = "block"
@@ -173,3 +140,6 @@ cancelBar.addEventListener("click",()=>{
     menuBar.style.display = "flex"
     cancelBar.style.display = "none"
 })
+closeResults=()=>{
+    window.history.back()
+}

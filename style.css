@@ -93,22 +93,26 @@ button, a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  outline: 0 !important;
 }
 
 .navbar form input {
-  border: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
+  border: 0 !important;
+  outline: 0 !important;
 }
 
 .navbar form button {
   border-radius: 10px;
   border: 1px solid #38a05b;
+  outline: 0 !important;
 }
 
 .navbar form button:hover {
+  outline: none !important;
   color: #38a05b;
   background-color: #bcebbc;
   border: 1px solid #bcebbc;
@@ -237,7 +241,20 @@ button, a {
   padding-top: 70px;
 }
 
+.results-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.results-header button {
+  padding: 5px;
+  background: transparent;
+  border-radius: 30px;
+}
+
 .results .result {
+  padding-top: 30px;
   width: 100% !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,6 +326,7 @@ button, a {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
+  overflow: scroll !important;
   top: 30%;
   -webkit-transform: translate(-50% -50%);
           transform: translate(-50% -50%);
@@ -401,10 +419,7 @@ button, a {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: #fff;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  cursor: pointer;
 }
 
 .foods-body-items-item img {
@@ -417,6 +432,7 @@ button, a {
   height: 80%;
   margin: auto;
   border-radius: 50%;
+  border: 10px white solid;
 }
 
 .variety {

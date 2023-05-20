@@ -71,15 +71,19 @@ p{
   }
   form{
     display: flex;
+    outline: 0 !important;
     input{
-        border: 0;
         align-items: center;
         border-radius: 10px;
+        border: 0 !important;
+        outline: 0 !important;
     }
     button{
         border-radius: 10px;
         border: 1px solid rgb(56, 160, 91);
+        outline: 0 !important;
         &:hover{
+            outline: none !important;
             color: rgb(56, 160, 91);
             background-color: rgb(188, 235, 188);
             border: 1px solid rgb(188, 235, 188);
@@ -165,7 +169,17 @@ p{
     margin: auto !important;
     padding-bottom: 70px;
     padding-top: 70px;
+    &-header{
+        justify-content: space-between;
+        button{
+            padding:5px;
+            background: transparent;
+            border-radius: 30px;
+            
+        }
+    }
     .result{
+        padding-top: 30px;
         width: 100% !important;
         display: flex;
         flex-direction: row;
@@ -212,6 +226,7 @@ p{
     width: 80%;
     justify-content: center;
     position: fixed;
+   overflow: scroll !important;
     top: 30%;
     transform: translate(-50% -50%);
     &-button{
@@ -273,8 +288,8 @@ p{
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        background: #fff;
-        align-items: center !important;
+        cursor: pointer;
+
         img {
             object-position: center !important;
           display: block;
@@ -283,6 +298,7 @@ p{
           height: 80%;
           margin: auto;
           border-radius: 50%;
+          border: 10px white solid;
         }
       }
     }
