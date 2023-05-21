@@ -97,15 +97,13 @@ function cancelRecipe() {
   }
   foods.forEach(food=>{
     food.addEventListener("click",(e)=>{
+  
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
         .then(response => response.json())
         .then(data =>{
-            console.log(data)
-            if(data.meals){
-                const meal = data.meals[0];
+            console.log(data);
+            const meal = data.meals[0];
             displayRecipe(meal)
-       
-        }
     })   
     })
   })
