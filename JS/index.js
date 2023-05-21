@@ -96,18 +96,7 @@ function cancelRecipe() {
     recipe.remove();
   }
   foods.forEach(food=>{
-    food.addEventListener("click",(e)=>{
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
-        .then(response => response.json())
-        .then(data =>{
-            console.log(data)
-            if(data.meals){
-                const meal = data.meals[0];
-            displayRecipe(meal)
-       
-        }
-    })   
-    })
+  
   })
 window.onload = displayFoods=()=>{
     
@@ -116,6 +105,18 @@ window.onload = displayFoods=()=>{
         .then(response => response.json())
         .then(data =>{
             console.log(data)
+            food.addEventListener("click",(e)=>{
+                e.preventDefault()
+    
+                    console.log(data);
+                    if(data.meals){
+                        const meal = data.meals[0];
+                    displayRecipe(meal);
+               
+                }
+            }) 
+         
+            })
         if(data.meals){
             const foodLink = document.createElement("a");
             food.dataset.id = `${food.idMeal}`
@@ -124,7 +125,7 @@ window.onload = displayFoods=()=>{
             food.appendChild(foodLink)
         }
     })   
-});
+
 }
 frontPage.style.display = "none"
 window.addEventListener("load",()=>{
