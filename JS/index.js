@@ -95,6 +95,7 @@ function cancelRecipe() {
     const recipe = document.querySelector(".recipe");
     recipe.remove();
   }
+<<<<<<< HEAD
 
 foods.forEach((food) => {
     console.log(food.dataset.id)
@@ -102,6 +103,18 @@ foods.forEach((food) => {
     .then(response => response.json())
     .then(data =>{
         console.log(data)
+=======
+  foods.forEach(food=>{
+    food.addEventListener("click",(e)=>{
+  
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+            const meal = data.meals[0];
+            displayRecipe(meal)
+    })   
+>>>>>>> 224d3a82f2b8d2143ceaf4c525766b42fd97935f
     })
    
 });
@@ -139,5 +152,11 @@ cancelBar.addEventListener("click",()=>{
     cancelBar.style.display = "none"
 })
 closeResults=()=>{
+<<<<<<< HEAD
     window.history.back()
+=======
+   result.remove()
+    document.querySelector(".results-header").style.display = "none"
+document.querySelector(".banner").style.display = "flex"
+>>>>>>> 224d3a82f2b8d2143ceaf4c525766b42fd97935f
 }
