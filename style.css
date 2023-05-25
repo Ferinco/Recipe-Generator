@@ -157,6 +157,60 @@ button, a {
   background-repeat: no-repeat;
 }
 
+.banner-image .cards {
+  width: 80%;
+  margin-top: 20px !important;
+  height: 80%;
+  margin-left: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-image .cards-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-image .cards-top-1, .banner-image .cards-top-2 {
+  max-width: 150px;
+  height: auto;
+  padding: 10px;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-image .cards-bottom {
+  margin-top: 50%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.banner-image .cards-bottom-1 {
+  padding: 10px;
+  width: 150px;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .banner-intro {
   width: 40%;
   display: -webkit-box;
@@ -1353,6 +1407,9 @@ a:hover {
     background-position: left;
     background-size: cover;
   }
+  .banner-image .cards {
+    display: none;
+  }
   .banner-intro {
     width: 50%;
   }
@@ -1394,6 +1451,9 @@ a:hover {
     width: 100px;
     height: 100px;
     background: transparent;
+  }
+  .foods-body-items-item img {
+    border: 0;
   }
   .variety {
     padding-top: 50px;

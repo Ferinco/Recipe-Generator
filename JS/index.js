@@ -95,37 +95,34 @@ function cancelRecipe() {
     const recipe = document.querySelector(".recipe");
     recipe.remove();
   }
-  foods.forEach(food=>{
-  
-  })
-window.onload = displayFoods=()=>{
-    
-    foods.forEach(food => {
+
+foods.forEach((food) => {
+    console.log(food.dataset.id)
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data)
+    })
+   
+});
+window.onload = displayFoods=()=>{    
+    foods.forEach((food) => {   
+            
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
         .then(response => response.json())
         .then(data =>{
             console.log(data)
-            food.addEventListener("click",(e)=>{
-                e.preventDefault()
-    
-                    console.log(data);
-                    if(data.meals){
-                        const meal = data.meals[0];
-                    displayRecipe(meal);
-               
-                }
-            }) 
-         
-            })
+            console.log(food.dataset.id)
         if(data.meals){
             const foodLink = document.createElement("a");
             food.dataset.id = `${food.idMeal}`
             foodLink.innerHTML = `
             <img src="${data.meals[0].strMealThumb}" alt=""/>`
             food.appendChild(foodLink)
+           
         }
     })   
-
+});
 }
 frontPage.style.display = "none"
 window.addEventListener("load",()=>{
