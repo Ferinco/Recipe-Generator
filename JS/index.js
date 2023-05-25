@@ -12,6 +12,7 @@ notFound.innerHTML = `sorry, couldn't find a match or your search`
 document.querySelector(".results-header").style.display = "none"
 searchResults.style.display = "none"
 const foods = document.querySelectorAll('.foods-body-items-item');
+const foodsRecipe = document.querySelector(".foods")
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -22,7 +23,6 @@ searchBtn.addEventListener("click",(e)=>{
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchedItem}`)
     .then(response => response.json())
     .then(data =>{
-        console.log(data)
         if(data.meals){
             data.meals.forEach(meal => {
                 notFound.remove()
@@ -64,7 +64,6 @@ result.addEventListener("click", (e) => {
       fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${resultMeal.dataset.id}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
           if (data.meals) {
             const meal = data.meals[0];
             displayRecipe(meal);
@@ -75,6 +74,7 @@ result.addEventListener("click", (e) => {
         });
     }
   }); 
+
   function displayRecipe(meal) {
     const recipe = document.createElement("div");
     recipe.className = "recipe";
@@ -95,48 +95,45 @@ function cancelRecipe() {
     const recipe = document.querySelector(".recipe");
     recipe.remove();
   }
-<<<<<<< HEAD
 
-foods.forEach((food) => {
-    console.log(food.dataset.id)
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
-    .then(response => response.json())
-    .then(data =>{
-        console.log(data)
-=======
-  foods.forEach(food=>{
-    food.addEventListener("click",(e)=>{
+  function displayFood(meal) {
+    const recipe = document.createElement("div");
+    recipe.className = "recipe";
+    recipe.innerHTML = `
+      <div class="recipe-button">
+        <button id="close-recipe" onclick="cancelRecipe()" class = "fa fa-times"></button>
+      </div>
+      <div class="recipe-body">
+        <h3>${meal.strMeal}</h3>
+        <p>Category: <span>${meal.strCategory}</span></p>
+        <h3>Instructions</h3>
+        <p>${meal.strInstructions}</p>
+      </div>`;
   
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
-        .then(response => response.json())
-        .then(data =>{
-            console.log(data);
-            const meal = data.meals[0];
-            displayRecipe(meal)
-    })   
->>>>>>> 224d3a82f2b8d2143ceaf4c525766b42fd97935f
-    })
-   
-});
-window.onload = displayFoods=()=>{    
+    foodsRecipe.appendChild(recipe);
+  } 
+// window.onload = displayFoods=()=>{    
     foods.forEach((food) => {   
             
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${food.dataset.id}`)
         .then(response => response.json())
         .then(data =>{
-            console.log(data)
-            console.log(food.dataset.id)
         if(data.meals){
             const foodLink = document.createElement("a");
             food.dataset.id = `${food.idMeal}`
             foodLink.innerHTML = `
             <img src="${data.meals[0].strMealThumb}" alt=""/>`
             food.appendChild(foodLink)
+            food.addEventListener("click",(e)=>{
+              meal = data.meals[0]
+              displayFood(meal)
+              console.log(meal)
+            })
            
         }
     })   
 });
-}
+// }
 frontPage.style.display = "none"
 window.addEventListener("load",()=>{
 frontPage.style.display = "block"
@@ -152,11 +149,5 @@ cancelBar.addEventListener("click",()=>{
     cancelBar.style.display = "none"
 })
 closeResults=()=>{
-<<<<<<< HEAD
-    window.history.back()
-=======
-   result.remove()
-    document.querySelector(".results-header").style.display = "none"
-document.querySelector(".banner").style.display = "flex"
->>>>>>> 224d3a82f2b8d2143ceaf4c525766b42fd97935f
+ location.reload()
 }

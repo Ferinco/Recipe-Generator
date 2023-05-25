@@ -301,10 +301,14 @@ button, a {
           justify-content: space-between;
 }
 
+.results-header h4 {
+  font-size: 16px;
+}
+
 .results-header button {
-  padding: 5px;
+  border: 0;
+  padding: 0;
   background: transparent;
-  border-radius: 30px;
 }
 
 .results .result {
@@ -376,12 +380,21 @@ button, a {
   padding: 10px;
   background-color: #f5f5f5;
   width: 80%;
+  margin: auto !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
   overflow: scroll !important;
   top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll !important;
   -webkit-transform: translate(-50% -50%);
           transform: translate(-50% -50%);
 }
