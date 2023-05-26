@@ -13,6 +13,10 @@ document.querySelector(".results-header").style.display = "none"
 searchResults.style.display = "none"
 const foods = document.querySelectorAll('.foods-body-items-item');
 const foodsRecipe = document.querySelector(".foods")
+const recipeResults = document.querySelector(".recipe-results")
+var recipe = document.querySelector(".recipe")
+recipe.style.display = "none"
+document.getElementById("result-preloader").style.display ="none"
 
 searchBtn.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -66,7 +70,13 @@ result.addEventListener("click", (e) => {
         .then(data => {
           if (data.meals) {
             const meal = data.meals[0];
-            displayRecipe(meal);
+            document.getElementById("result-preloader").style.display ="flex"
+            result.style.filter = "blur(4px)"
+            setTimeout(() => {
+              displayRecipe(meal);
+              document.getElementById("result-preloader").style.display ="none"
+              result.style.filter = "blur(0)"
+            }, 2000);
           }
         })
         .catch(error => {
@@ -76,29 +86,30 @@ result.addEventListener("click", (e) => {
   }); 
 
   function displayRecipe(meal) {
-    const recipe = document.createElement("div");
-    recipe.className = "recipe";
+    // const recipe = document.createElement("div");
+    // recipe.className = "recipe";
     recipe.innerHTML = `
-      <div class="recipe-button">
-        <button id="close-recipe" onclick="cancelRecipe()" class = "fa fa-times"></button>
-      </div>
-      <div class="recipe-body">
-        <h3>${meal.strMeal}</h3>
-        <p>Category: <span>${meal.strCategory}</span></p>
-        <h3>Instructions</h3>
-        <p>${meal.strInstructions}</p>
-      </div>`;
-  
-    searchResults.appendChild(recipe);
+    <div class="recipe-button">
+    <button id="close-recipe" onclick="cancelRecipe()" class = "fa fa-times"></button>
+    </div>
+    <div class="recipe-body">
+    <h3>${meal.strMeal}</h3>
+    <p>Category: <span>${meal.strCategory}</span></p>
+    <h3>Instructions</h3>
+    <p>${meal.strInstructions}</p>
+    </div>`;
+    recipe.style.display = "flex"
+    document.getElementById("front-page").style.filter = "blur(4px)"
+    
+    // searchResults.appendChild(recipe);
+    // recipe.innerHTML = ""
   } 
 function cancelRecipe() {
-    const recipe = document.querySelector(".recipe");
-    recipe.remove();
+    recipe.style.display = "none"
+    document.getElementById("front-page").style.filter = "blur(0)"
   }
 
   function displayFood(meal) {
-    const recipe = document.createElement("div");
-    recipe.className = "recipe";
     recipe.innerHTML = `
       <div class="recipe-button">
         <button id="close-recipe" onclick="cancelRecipe()" class = "fa fa-times"></button>
@@ -109,9 +120,11 @@ function cancelRecipe() {
         <h3>Instructions</h3>
         <p>${meal.strInstructions}</p>
       </div>`;
+      recipe.style.display = "flex"
   
-    foodsRecipe.appendChild(recipe);
   } 
+  const foodsPreloader =document.getElementById("foods-preloader")
+  foodsPreloader.style.display = "none"
 // window.onload = displayFoods=()=>{    
     foods.forEach((food) => {   
             
@@ -126,8 +139,15 @@ function cancelRecipe() {
             food.appendChild(foodLink)
             food.addEventListener("click",(e)=>{
               meal = data.meals[0]
-              displayFood(meal)
-              console.log(meal)
+              foodsPreloader.style.display = "flex"
+              document.querySelector(".foods-body").style.filter = "blur(4px)"
+              
+              setTimeout(() => {
+                displayFood(meal)
+                foodsPreloader.style.display = "none"
+                document.getElementById("front-page").style.filter = "blur(4px)"
+                document.querySelector(".foods-body").style.filter = "blur(0)"
+              }, 2000);
             })
            
         }

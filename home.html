@@ -25,11 +25,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="preloader">
+  
+    <div id="front-page">
+        <div id="preloader">
       <img src="Images/loading.gif" alt="" />
     </div>
-    <div id="front-page">
-      <section class="nav-section">
+    <section class="nav-section">
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="home.html">Ferin<span>Food</span></a>
           <button
@@ -64,7 +65,7 @@
               <input
                 class="form-control mr-sm-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Search by ingredients"
                 aria-label="Search"
                 id="search-input"
               />
@@ -159,7 +160,11 @@
       </section>
       <section class="results" id="search-results">
         <div class="results-header"><h4>Here are the results to your search</h4><button onclick="closeResults()" class="fa fa-times"></button></div>
-        <div class="result" id="result"></div>
+        <div class="result" id="result">
+        </div>
+        <div id="result-preloader">
+          <img src="Images/loading.gif" alt="">
+        </div>
       </section>
       <section class="foods">
         <div class="foods-header">
@@ -192,6 +197,9 @@
             <div class="foods-body-items-item big" data-id="53061">
             </div>
           </div>
+        </div>
+        <div id="foods-preloader">
+          <img src="Images/loading.gif" alt="" />
         </div>
       </section>
       <section class="variety">
@@ -404,6 +412,11 @@
           </div>
         </div>
       </section>
+    </div>
+    <div class="recipe-results">
+
+      <div class="recipe">
+      </div>
     </div>
     <script src="JS/index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
