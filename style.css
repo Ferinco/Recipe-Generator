@@ -32,13 +32,14 @@ button, a {
 }
 
 #foods-preloader {
-  margin-top: -25%;
+  position: absolute;
   padding-bottom: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -328,7 +329,6 @@ button, a {
   margin: auto !important;
   padding-bottom: 70px;
   padding-top: 70px;
-  overflow: scroll !important;
 }
 
 .results-header {
@@ -939,22 +939,6 @@ button, a {
   body {
     padding: 0;
     margin: 0;
-  }
-  #foods-preloader {
-    margin-top: -100%;
-    padding-bottom: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 999;
   }
   .nav-section {
     width: 100%;

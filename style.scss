@@ -20,11 +20,20 @@ p{
     align-items: center;
 }
 #foods-preloader{
-  margin-top: -25%;
+  // margin-top: -25%;
+  // padding-bottom: 300px;
+  // display: flex;
+  // width: 100%;
+  // height: 100%;
+  // justify-content: center;
+  // align-items: center;
+  // z-index: 999;
+  position: absolute;
   padding-bottom: 300px;
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -222,7 +231,6 @@ p{
     margin: auto !important;
     padding-bottom: 70px;
     padding-top: 70px;
-    overflow: scroll !important;
     &-header{
         justify-content: space-between;
         h4{
@@ -656,19 +664,19 @@ justify-content: center;
         margin: 0
         
     }
-    #foods-preloader{
-      margin-top: -100%;
-      padding-bottom: 500px;
-      display: flex;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
+    // #foods-preloader{
+    //   margin-top: -100%;
+    //   padding-bottom: 500px;
+    //   display: flex;
+    //   width: 100%;
+    //   height: 100%;
+    //   justify-content: center;
+    //   align-items: center;
+    //   z-index: 999;
     
     
     
-    }
+    // }
     .nav-section {
         width: 100%;
         background: #f5f5f5;
